@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SajiKode</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="nav-bar fixed top-0 left-0 right-0 bg-white p-4 shadow-lg z-50 border-b border-gray-100">
+        <div class="container-xl mx-auto flex justify-between items-center px-4">
+            <a href="#hero" class="text-white-700 hover:text-[var(--primary-color)] text-2xl sm:text-3xl font-extrabold tracking-wide transform hover:scale-105 transition-transform duration-300">SajiKode</a>
+            <div class="flex items-center space-x-4">
+                <button class="hamburger-button text-gray-700 focus:outline-none md:hidden dark:text-gray-300" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('hidden')">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="nav-links hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mt-4 md:mt-0 absolute md:static top-full left-0 right-0 bg-white md:bg-transparent shadow-lg md:shadow-none p-4 md:p-0 dark:bg-[#1e1e1e]">
+                <a href="#about" class="text-gray-700 hover:text-[var(--primary-color)] nav-link block dark:text-gray-300 dark:hover:text-white">Tentang Kami</a>
+                <a href="#services" class="text-gray-700 hover:text-[var(--primary-color)] nav-link block dark:text-gray-300 dark:hover:text-white">Layanan</a>
+                <a href="#projects" class="text-gray-700 hover:text-[var(--primary-color)] nav-link block dark:text-gray-300 dark:hover:text-white">Projek</a>
+                <a href="#process" class="text-gray-700 hover:text-[var(--primary-color)] nav-link block dark:text-gray-300 dark:hover:text-white">Proses Kerja</a>
+                <a href="#contact" class="text-gray-700 hover:text-[var(--primary-color)] nav-link block dark:text-gray-300 dark:hover:text-white">Kontak</a>
+                
+                <button id="dark-mode-toggle" class="p-2 rounded-full text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 transition-colors duration-300">
+                    <i class="fas fa-moon text-lg dark-icon"></i>
+                    <i class="fas fa-sun text-lg light-icon hidden"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-bg-gradient relative overflow-hidden flex items-center justify-center min-h-screen pt-24 pb-16 md:pt-32 md:pb-24 text-center">
+        <div class="absolute inset-0 z-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100%25\' height=\'100%25\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath fill=\'%23a78bfa\' d=\'M50 0 L100 25 L100 75 L50 100 L0 75 L0 25 Z\'/%3E%3C/svg%3E'); background-size: 80px; animation: background-move 40s linear infinite;"></div>
+        <div class="container-xl flex flex-col items-center justify-center gap-8 md:gap-12 relative z-10 px-4">
+            <div class="md:w-full fade-in-on-scroll">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 leading-tight hero-title animate-bounce-in">
+                    Solusi Pengembangan Digital <span class="text-[var(--primary-color)]">Inovatif</span>
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl font-medium text-gray-700 mb-6 max-w-4xl mx-auto hero-subtitle animate-fade-up">
+                    Kami <span class="font-bold text-[var(--primary-color)]">SajiKode</span>, ahli dalam menciptakan pengalaman digital yang luar biasa.
+                </p>
+                <p class="max-w-4xl text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 hero-description mx-auto animate-fade-up-delay">
+                    Wujudkan ide Anda menjadi kenyataan digital dengan layanan profesional kami, mulai dari website interaktif, aplikasi mobile fungsional, hingga desain antarmuka pengguna yang memukau.
+                </p>
+                <div class="mt-8 flex flex-wrap justify-center gap-3 sm:gap-5">
+                    <a href="#services" class="px-8 py-3 sm:px-10 sm:py-4 border-2 border-[var(--primary-color)] text-[var(--primary-color)] font-bold rounded-full shadow-lg hover:bg-[#f3e8ff] dark:hover:bg-violet-950 transition duration-300 transform hover:scale-105 hover:shadow-xl text-sm sm:text-base">Lihat Layanan Kami</a>
+                    <a href="#contact" class="px-8 py-3 sm:px-10 sm:py-4 border-2 border-[var(--primary-color)] text-[var(--primary-color)] font-bold rounded-full shadow-lg hover:bg-[#f3e8ff] dark:hover:bg-violet-950 transition duration-300 transform hover:scale-105 hover:shadow-xl text-sm sm:text-base">Hubungi Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container-xl px-4 py-16 sm:py-24 bg-white">
+        <h2 class="text-3xl sm:text-4xl font-bold section-title text-gray-900 dark:text-white">Tentang SajiKode</h2>
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-6xl mx-auto">
+            <div class="md:w-1/2 text-center md:text-left fade-in-on-scroll">
+                <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-4">
+                    Kami adalah tim pengembang dan desainer yang bersemangat, berdedikasi untuk menciptakan solusi digital yang tidak hanya fungsional tapi juga indah.
+                </p>
+                <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-4">
+                    Dengan pengalaman bertahun-tahun dalam berbagai teknologi modern, kami memiliki rekam jejak yang solid dalam membantu klien mewujudkan ide-ide mereka. Kami percaya bahwa setiap proyek adalah kesempatan untuk berinovasi dan memberikan nilai nyata.
+                </p>
+                <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300">
+                    Kami berkomitmen untuk memberikan hasil terbaik melalui kolaborasi yang transparan dan komunikasi yang intensif. Setiap langkah pengembangan dilakukan bersama Anda, memastikan produk akhir tidak hanya memenuhi ekspektasi, tetapi juga melampauinya.
+                </p>
+            </div>
+            <div class="md:w-1/2 flex flex-col gap-4 text-center fade-in-on-scroll">
+                <div class="about-card p-6 rounded-xl shadow-lg border">
+                    <h3 class="text-2xl font-bold text-[var(--primary-color)] mb-2">100% Inovatif</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Kami selalu mencari cara baru untuk membuat produk Anda unik dan relevan.</p>
+                </div>
+                <div class="about-card p-6 rounded-xl shadow-lg border">
+                    <h3 class="text-2xl font-bold text-[var(--primary-color)] mb-2">Solusi Kustom</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Setiap proyek dirancang khusus sesuai kebutuhan dan visi bisnis Anda.</p>
+                </div>
+                <div class="about-card p-6 rounded-xl shadow-lg border">
+                    <h3 class="text-2xl font-bold text-[var(--primary-color)] mb-2">Dukungan Penuh</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Dari ide hingga peluncuran, kami memberikan dukungan penuh di setiap tahap.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <section id="services" class="container-xl px-4 py-16 sm:py-24 bg-white shadow-2xl rounded-2xl -mt-16 relative z-20">
+        <h2 class="text-3xl sm:text-4xl font-bold section-title text-gray-900 dark:text-white">Layanan</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 max-w-6xl mx-auto text-center">
+            <div class="info-card p-6 sm:p-10 rounded-xl shadow-xl border fade-in-on-scroll">
+                <i class="fas fa-desktop text-5xl text-[var(--primary-color)] dark:text-blue-300 mb-4"></i>
+
+                <h3 class="text-xl sm:text-2xl font-semibold text-[var(--primary-color)] mb-3">Pengembangan Web</h3>
+                <p class="text-gray-700 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+                    Kami membangun website responsif dan modern menggunakan teknologi terkini untuk memastikan performa yang optimal.
+                </p>
+            </div>
+            <div class="info-card p-6 sm:p-10 rounded-xl shadow-xl border fade-in-on-scroll" style="animation-delay: 0.2s;">
+                <i class="fas fa-mobile-alt text-5xl text-[var(--primary-color)] mb-4"></i>
+                <h3 class="text-xl sm:text-2xl font-semibold text-[var(--primary-color)] mb-3">Pengembangan Aplikasi</h3>
+                <p class="text-gray-700 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+                    Menciptakan aplikasi mobile multi-platform yang kuat dan efisien dengan pengalaman pengguna terbaik.
+                </p>
+            </div>
+            <div class="info-card p-6 sm:p-10 rounded-xl shadow-xl border fade-in-on-scroll" style="animation-delay: 0.4s;">
+                <i class="fas fa-paint-brush text-5xl text-[var(--primary-color)] mb-4"></i>
+                <h3 class="text-xl sm:text-2xl font-semibold text-[var(--primary-color)] mb-3">Desain UI/UX</h3>
+                <p class="text-gray-700 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+                    Merancang antarmuka pengguna yang intuitif dan menarik untuk meningkatkan kepuasan pengguna.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    ---
+
+    <section id="tech-stack" class="container-xl px-4 py-16 sm:py-24">
+        <h2 class="text-3xl sm:text-4xl font-bold section-title text-gray-900 dark:text-white">Teknologi yang Kami Gunakan</h2>
+        <p class="text-center text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-4xl mx-auto">
+            Kami menguasai berbagai teknologi dan framework modern untuk menciptakan produk digital yang powerful, skalabel, dan efisien.
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 max-w-6xl mx-auto">
+            <div class="tech-icon-card fade-in-on-scroll">
+                <i class="fab fa-node-js text-6xl text-lime-500"></i>
+                <p class="text-sm font-semibold mt-2">Node.js</p>
+            </div>
+            <div class="tech-icon-card fade-in-on-scroll">
+                <i class="fab fa-laravel text-6xl text-red-500"></i>
+                <p class="text-sm font-semibold mt-2">Laravel</p>
+            </div>
+            <div class="tech-icon-card fade-in-on-scroll">
+                <i class="fab fa-js text-6xl text-yellow-400"></i>
+                <p class="text-sm font-semibold mt-2">JavaScript</p>
+            </div>
+            <div class="tech-icon-card fade-in-on-scroll">
+                <i class="fas fa-database text-6xl text-gray-600 dark:text-gray-400"></i>
+                <p class="text-sm font-semibold mt-2">MongoDB / Firebase</p>
+            </div>
+            <div class="tech-icon-card fade-in-on-scroll">
+                <i class="fab fa-html5 text-6xl text-orange-600"></i>
+                <p class="text-sm font-semibold mt-2">HTML</p>
+            </div>
+            <div class="tech-icon-card fade-in-on-scroll">
+                <i class="fab fa-css3-alt text-6xl text-blue-600"></i>
+                <p class="text-sm font-semibold mt-2">CSS</p>
+            </div>
+            <div class="tech-icon-card fade-in-on-scroll">
+                <img src="https://cdn.simpleicons.org/flutter/02569B" alt="Flutter" class="w-12 h-12 object-contain" />
+                <p class="text-sm font-semibold mt-2">Flutter</p>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <section id="projects" class="container-xl px-4 py-16 sm:py-24 bg-white shadow-2xl">
+        <h2 class="text-3xl sm:text-4xl font-bold section-title text-gray-900 dark:text-white">Projek Kami</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+            <a href="https://github.com/slmnsulaiman/manajemen_karyawan.git" target="_blank" class="block fade-in-on-scroll">
+                <div class="project-card p-6 sm:p-8 flex flex-col h-full">
+                    <img src="assets/manajemen-karyawan.jpeg" alt="Aplikasi Manajemen Karyawan" class="w-full h-40 sm:h-52 object-contain p-2 rounded-lg mb-6 bg-gray-50 border border-gray-200 shadow-sm dark:bg-[#282828] dark:border-gray-700">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-[var(--primary-color)] mb-3">Sistem Manajemen Karyawan</h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm sm:text-base flex-grow leading-relaxed">
+                        Aplikasi Mobile untuk manajemen karyawan dengan <b>Flutter</b> dan <b>Firebase</b>. Fitur meliputi pelacakan kehadiran, cuti, lembur, manajemen inventaris, dan laporan PDF.
+                    </p>
+                </div>
+            </a>
+            <a href="https://github.com/slmnsulaiman/coffe_shop_paymentgateway_pushnotif.git" target="_blank" class="block fade-in-on-scroll">
+                <div class="project-card p-6 sm:p-8 flex flex-col h-full">
+                    <img src="assets/copi.jpeg" alt="Aplikasi Pembayaran Kedai Kopi" class="w-full h-40 sm:h-52 object-contain p-2 rounded-lg mb-6 bg-gray-50 border border-gray-200 shadow-sm dark:bg-[#282828] dark:border-gray-700">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-[var(--primary-color)] mb-3">Payment Gateway Kedai Kopi dengan Notifikasi Push</h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm sm:text-base flex-grow leading-relaxed">
+                        Sistem pembayaran kopi dengan aplikasi <b>Flutter, Node.js, MongoDB, FCM, Midtrans</b>.
+                    </p>
+                </div>
+            </a>
+            <a href="https://github.com/slmnsulaiman/food_delivery_umkm.git" target="_blank" class="block fade-in-on-scroll">
+                <div class="project-card p-6 sm:p-8 flex flex-col h-full">
+                    <img src="assets/food.jpeg" alt="Aplikasi Pengiriman Makanan" class="w-full h-40 sm:h-52 object-contain p-2 rounded-lg mb-6 bg-gray-50 border border-gray-200 shadow-sm dark:bg-[#282828] dark:border-gray-700">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-[var(--primary-color)] mb-3">Aplikasi Pengiriman Makanan Real-time untuk UMKM</h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm sm:text-base flex-grow leading-relaxed">
+                        Aplikasi pengiriman makanan UMKM menggunakan <b>Flutter, Firebase, Node.js, MongoDB</b>.
+                    </p>
+                </div>
+            </a>
+            <a href="https://github.com/username/web-learning" target="_blank" class="block fade-in-on-scroll">
+                <div class="project-card p-6 sm:p-8 flex flex-col h-full">
+                    <img src="assets/learning.png" alt="Aplikasi Pembelajaran Web" class="w-full h-40 sm:h-52 object-contain p-2 rounded-lg mb-6 bg-gray-50 border border-gray-200 shadow-sm dark:bg-[#282828] dark:border-gray-700">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-[var(--primary-color)] mb-3">Platform Pembelajaran (Dalam Pengembangan)</h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm sm:text-base flex-grow leading-relaxed">
+                        Platform pembelajaran berbasis web interaktif. Sedang dikembangkan untuk materi kursus dan pengalaman belajar komprehensif.
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.figma.com/proto/DSJ2VT3yAj96vTOiawmysB/GreenX?node-id=39-2&p=f&t=BUNh41W57ZC2seZc-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=283%3A3349" target="_blank" class="block fade-in-on-scroll">
+                <div class="project-card p-6 sm:p-8 flex flex-col h-full">
+                    <img src="assets/greenx.png" alt="UI/UX GreenX" class="w-full h-40 sm:h-52 object-contain p-2 rounded-lg mb-6 bg-gray-50 border border-gray-200 shadow-sm dark:bg-[#282828] dark:border-gray-700">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-[var(--primary-color)] mb-3">UI/UX Design for GreenX (Aplikasi Lingkungan)</h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm sm:text-base flex-grow leading-relaxed">
+                        Desain UI/UX untuk <b>aplikasi lingkungan</b> platform manajemen lingkungan. Fokus pada pengalaman pengguna intuitif untuk memantau aktivitas hijau.
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.figma.com/proto/aYZtU8BFJMgkH3I7waBV0c/Course?t=oCoFc31ErxXO4d6w-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=11-5286&starting-point-node-id=4%3A10" target="_blank" class="block fade-in-on-scroll">
+                <div class="project-card p-6 sm:p-8 flex flex-col h-full">
+                    <img src="assets/course.png" alt="UI/UX Course App" class="w-full h-40 sm:h-52 object-contain p-2 rounded-lg mb-6 bg-gray-50 border border-gray-200 shadow-sm dark:bg-[#282828] dark:border-gray-700">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-[var(--primary-color)] mb-3">UI/UX Design for a Course Application</h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm sm:text-base flex-grow leading-relaxed">
+                        Desain UI/UX untuk <b>aplikasi kursus</b> berbasis Mobile. Prioritas pada pengalaman pengguna mulus untuk memantau materi dan progres.
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    ---
+
+   <section id="process" class="container-xl px-4 py-16 sm:py-24">
+    <h2 class="text-3xl sm:text-4xl font-bold section-title text-gray-900 dark:text-white">Proses Kerja Kami</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- 1. Diskusi -->
+        <div class="process-card p-6 sm:p-8 text-center rounded-xl shadow-lg border fade-in-on-scroll">
+            <div class="w-16 h-16 mx-auto bg-violet-100 rounded-full flex items-center justify-center mb-4 dark:bg-violet-900">
+                <i class="fas fa-lightbulb text-3xl text-[#3C0E59] dark:text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 dark:text-white">1. Diskusi & Perencanaan</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Kami mendengarkan ide Anda, menganalisis kebutuhan, dan merumuskan strategi terbaik untuk proyek.</p>
+        </div>
+
+        <!-- 2. Desain -->
+        <div class="process-card p-6 sm:p-8 text-center rounded-xl shadow-lg border fade-in-on-scroll" style="animation-delay: 0.2s;">
+            <div class="w-16 h-16 mx-auto bg-violet-100 rounded-full flex items-center justify-center mb-4 dark:bg-violet-900">
+                <i class="fas fa-pencil-ruler text-3xl text-[#3C0E59] dark:text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 dark:text-white">2. Desain & Prototyping</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Menciptakan desain UI/UX yang menarik dan fungsional, lalu membangun prototipe yang interaktif.</p>
+        </div>
+
+        <!-- 3. Pengembangan -->
+        <div class="process-card p-6 sm:p-8 text-center rounded-xl shadow-lg border fade-in-on-scroll" style="animation-delay: 0.4s;">
+            <div class="w-16 h-16 mx-auto bg-violet-100 rounded-full flex items-center justify-center mb-4 dark:bg-violet-900">
+                <i class="fas fa-code text-3xl text-[#3C0E59] dark:text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 dark:text-white">3. Pengembangan</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Mengubah desain menjadi produk digital yang responsif, stabil, dan teruji.</p>
+        </div>
+
+        <!-- 4. Peluncuran -->
+        <div class="process-card p-6 sm:p-8 text-center rounded-xl shadow-lg border fade-in-on-scroll" style="animation-delay: 0.6s;">
+            <div class="w-16 h-16 mx-auto bg-violet-100 rounded-full flex items-center justify-center mb-4 dark:bg-violet-900">
+                <i class="fas fa-rocket text-3xl text-[#3C0E59] dark:text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 dark:text-white">4. Peluncuran & Dukungan</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Meluncurkan produk Anda, diikuti dengan dukungan teknis untuk memastikan semuanya berjalan lancar.</p>
+        </div>
+
+    </div>
+</section>
+
+    ---
+
+    <section id="contact" class="contact-bg-gradient py-16 sm:py-24">
+        <div class="container-xl mx-auto px-4 text-center text-white">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 fade-in-on-scroll">Siap Mewujudkan Ide Luar Biasa Anda?</h2>
+            <p class="text-base sm:text-xl mb-8 sm:mb-10 max-w-3xl mx-auto opacity-90 fade-in-on-scroll">
+                Jangan biarkan potensi digital Anda terlewat. Tim SajiKode siap membantu Anda membangun produk digital yang kuat dan berkesan. Mari kita diskusikan proyek Anda sekarang!
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-10 max-w-6xl mx-auto">
+                <a href="mailto:ssajikodee@gmail.com" class="contact-link flex flex-col items-center p-6 bg-white bg-opacity-10 rounded-xl transition-all duration-300 transform hover:bg-opacity-20 hover:scale-105 fade-in-on-scroll">
+                    <i class="fas fa-envelope text-4xl mb-3"></i>
+                    <span class="text-sm sm:text-lg font-semibold">Email</span>
+                    <span class="text-xs sm:text-sm opacity-80 mt-1">ssajikodee@gmail.com</span>
+                </a>
+                <a href="https://wa.me/6281349175296" target="_blank" class="contact-link flex flex-col items-center p-6 bg-white bg-opacity-10 rounded-xl transition-all duration-300 transform hover:bg-opacity-20 hover:scale-105 fade-in-on-scroll">
+                    <i class="fab fa-whatsapp text-4xl mb-3"></i>
+                    <span class="text-sm sm:text-lg font-semibold">WhatsApp</span>
+                    <span class="text-xs sm:text-sm opacity-80 mt-1">+62 813-4917-5296</span>
+                </a>
+                <a href="https://instagram.com/sajikode_" target="_blank" class="contact-link flex flex-col items-center p-6 bg-white bg-opacity-10 rounded-xl transition-all duration-300 transform hover:bg-opacity-20 hover:scale-105 fade-in-on-scroll">
+                    <i class="fab fa-instagram text-4xl mb-3"></i>
+                    <span class="text-sm sm:text-lg font-semibold">Instagram</span>
+                    <span class="text-xs sm:text-sm opacity-80 mt-1">sajikode_</span>
+                </a>
+            </div>
+            <p class="text-sm sm:text-base opacity-70 mt-12 fade-in-on-scroll">&copy; 2025 SajiKode. Hak Cipta Dilindungi.</p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                if (window.innerWidth < 768) {
+                    document.querySelector('.nav-links').classList.add('hidden');
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in effect on scroll
+        const faders = document.querySelectorAll('.fade-in-on-scroll');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Dark Mode Functionality
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const htmlElement = document.documentElement;
+        const darkIcon = document.querySelector('.dark-icon');
+        const lightIcon = document.querySelector('.light-icon');
+
+        // Check for saved theme preference or use system preference
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            htmlElement.classList.add('dark');
+            darkIcon.classList.add('hidden');
+            lightIcon.classList.remove('hidden');
+        } else {
+            htmlElement.classList.remove('dark');
+            darkIcon.classList.remove('hidden');
+            lightIcon.classList.add('hidden');
+        }
+
+        // Toggle dark mode on button click
+        darkModeToggle.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            if (htmlElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                darkIcon.classList.add('hidden');
+                lightIcon.classList.remove('hidden');
+            } else {
+                localStorage.setItem('theme', 'light');
+                darkIcon.classList.remove('hidden');
+                lightIcon.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

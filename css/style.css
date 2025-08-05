@@ -1,0 +1,176 @@
+    :root {
+            --primary-color: #3C0E59;
+            --primary-light-color: #5d1c8f;
+        }
+
+        /* LIGHT MODE (Default) */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #F8FAFA;
+            color: #374151;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 0.75rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f2937; /* Warna default: Hitam/Navy */
+            transition: color 0.3s ease;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 100px;
+            height: 5px;
+            background-color: var(--primary-color);
+            border-radius: 9999px;
+            box-shadow: 0 4px 10px rgba(60, 14, 89, 0.3);
+        }
+
+        .project-card, .info-card, .process-card, .about-card {
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background-color 0.3s ease, border 0.3s ease;
+            border: 1px solid #E5E7EB;
+            background-color: #FFFFFF;
+            border-radius: 1.25rem;
+            overflow: hidden;
+        }
+        
+        .project-card:hover, .info-card:hover, .process-card:hover, .about-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-link {
+            transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+            padding: 0.7rem 1.2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .tech-icon-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 120px;
+            height: 120px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .tech-icon-card:hover {
+            transform: scale(1.1);
+        }
+        
+        .hero-bg-gradient {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e0c8ff 100%);
+        }
+        .contact-bg-gradient {
+            background: linear-gradient(135deg, #3C0E59 0%, #4a1d6e 100%);
+        }
+        .contact-link:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* DARK MODE */
+        html.dark body {
+            background-color: #121212;
+            color: #E0E0E0;
+        }
+        html.dark .nav-bar {
+            background-color: #1e1e1e;
+            border-bottom-color: #333333;
+        }
+        /* section-title harus putih di dark mode */
+        html.dark .section-title {
+            color: #fafafa;
+        }
+        /* Jika section bg putih, ubah jadi gelap di dark mode */
+    html.dark section.bg-white {
+        background-color: #1e1e1e !important;
+    }
+
+    /* Tambahan untuk teks utama di section agar terlihat jelas */
+    html.dark section.bg-white,
+    html.dark section.bg-white h2,
+    html.dark section.bg-white h3,
+    html.dark section.bg-white p {
+        color: #E0E0E0 !important;
+    }
+
+        html.dark .project-card,
+        html.dark .info-card,
+        html.dark .process-card,
+        html.dark .about-card {
+            background-color: #1e1e1e;
+            border-color: #333333;
+            color: #E0E0E0;
+        }
+        html.dark .project-card h3,
+        html.dark .info-card h3,
+        html.dark .process-card h3,
+        html.dark .about-card h3,
+        html.dark .about-card p {
+            color: #fafafa !important;
+        }
+        html.dark .project-card p,
+        html.dark .info-card p,
+        html.dark .process-card p {
+            color: #B0B0B0 !important;
+        }
+        html.dark .hero-bg-gradient {
+            background: linear-gradient(135deg, #1f083d 0%, #2f0c5a 100%);
+            color: #fafafa;
+        }
+        html.dark .hero-title,
+        html.dark .hero-subtitle,
+        html.dark .hero-description {
+            color: #E0E0E0;
+        }
+        html.dark .tech-icon-card p {
+            color: #E0E0E0;
+        }
+        html.dark .nav-link {
+            color: #B0B0B0;
+        }
+        html.dark .nav-link:hover {
+            color: #fafafa;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        html.dark .contact-bg-gradient {
+            background: linear-gradient(135deg, #2a0b41 0%, #3e165f 100%);
+        }
+        html.dark .contact-link {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        html.dark {
+        background-color: #121212;
+        color: #E0E0E0;
+        --primary-color: #ffffff; /* 🔥 INI TAMBAHAN PENTING */
+        --primary-light-color: #d1b3ff;
+        }
